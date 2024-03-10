@@ -2,8 +2,8 @@ using UnityEngine;
 
 public class Grow : MonoBehaviour
 {
-    [SerializeField] private float _growForce;
+    [SerializeField] private float _force;
 
     private void Update() =>
-        transform.localScale += new Vector3(_growForce, _growForce, _growForce);
+        transform.localScale += _force * Time.deltaTime * Vector3.one;
 }
